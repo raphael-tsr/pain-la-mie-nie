@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact - Boulangerie</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 0 20px 40px;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    nav.navbar {
+      width: 100%;
+      background-color: #d2691e;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      width: 100vw
+    }
+
+    nav.navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav.navbar a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s;
+      font-size: 1.1rem;
+    }
+
+    nav.navbar a:hover {
+      color: #ffcc66;
+    }
+
+    h1 {
+      color: #d2691e;
+      margin-bottom: 20px;
+    }
+
+    .contact-container {
+      max-width: 600px;
+      background: white;
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 0;
+      color: #444;
+    }
+
+    /* Téléphone avec icône */
+
+    .phone {
+      display: flex;
+      align-items: center;
+      font-size: 1.2rem;
+      color: #444;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .phone svg {
+      width: 24px;
+      height: 24px;
+      fill: #d2691e;
+    }
+
+    /* Boutons */
+
+    .btn-facebook,
+    .btn-instagram {
+      display: inline-block;
+      color: white;
+      padding: 12px 25px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      font-weight: bold;
+      user-select: none;
+    }
+
+    .btn-facebook {
+      background-color: #1877f2;
+    }
+
+    .btn-facebook:hover {
+      background-color: #145dbf;
+    }
+
+    .btn-instagram {
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+    }
+
+    .btn-instagram:hover {
+      filter: brightness(0.9);
+    }
+
+    /* Conteneur boutons horizontal */
+
+    .btns-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 480px) {
+      .contact-container {
+        padding: 20px;
+        gap: 20px;
+      }
+
+      .phone {
+        font-size: 1.1rem;
+      }
+
+      .btn-facebook,
+      .btn-instagram {
+        font-size: 1rem;
+        padding: 10px 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="carte.html">Carte</a></li>
+      <li><a href="a propos.html">À propos</a></li>
+      <li><a href="nos produits.html">Nos Produits</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <h1>Contactez-nous</h1>
+
+  <div class="contact-container">
+    <p>Pour toute question ou demande, n’hésitez pas à nous contacter via nos réseaux sociaux ou par téléphone.</p>
+
+    <div class="phone">
+      <!-- Icône téléphone SVG -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21 11.36 11.36 0 003.55.57 1 1 0 011 1v3.67a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.68a1 1 0 011 1 11.36 11.36 0 00.57 3.55 1 1 0 01-.21 1.11z"/>
+      </svg>
+      <span>+33 6 12 34 56 78</span>
+    </div>
+
+    <div class="btns-row">
+      <a href="https://www.facebook.com/profile.php?id=61572146370220" target="_blank" rel="noopener" class="btn-facebook">
+        Notre Facebook
+      </a>
+
+      <a href="https://www.instagram.com/chezgreg_painlamienid/" target="_blank" rel="noopener" class="btn-instagram">
+        Notre Instagram
+      </a>
+    </div>
+  </div>
+</body>
+
+</html>

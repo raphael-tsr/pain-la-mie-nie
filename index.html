@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chez Greg - Pain-la Mie-nid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<header>
+    
+</header>
+<body>
+    <nav class="navbar">
+    <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="carte.html">Carte</a></li>
+        <li><a href="a propos.html">À propos</a></li>
+        <li><a href="nos produits.html">Nos Produits</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+
+    <div class="banner"></div>
+
+    <div class="container">
+        <!-- Profil -->
+        <div class="profile-header">
+            <div class="logo"></div>
+            <div class="profile-info">
+                <h1>Chez Greg - Pain-la Mie-nid</h1>
+                <p>Artisan Boulanger 🥖 Nous sommes heureux de vous accueillir à Palaminy, Midi-Pyrénées.</p>
+            </div>
+        </div>
+
+        <!-- Intro -->
+        <div class="intro">
+            Bienvenue à la boulangerie CHEZ GREG 🥖 Nous vous accueillons du lundi au samedi avec des pains, viennoiseries et pâtisseries maison.
+        </div>
+
+        <!-- publication copie collez/ puis changer les infos -->
+        <div class="post">
+            <div class="post-header">
+                <div class="post-logo"></div>
+                <div class="post-info">
+                    <h2>Chez Greg - Pain-la Mie-nid</h2>
+                    <span>11 juillet, 16:55</span>
+                </div>
+            </div>
+            <div class="post-text">
+                🎉 OUVERTURE EXCEPTIONNELLE 🎉  
+                Ce lundi 14 juillet, votre boulangerie sera ouverte de 6h à 13h !
+            </div>
+        </div>
+
+        <!-- Autre publication -->
+        <div class="post">
+            <div class="post-header">
+                <div class="post-logo"></div>
+                <div class="post-info">
+                    <h2>Chez Greg - Pain-la Mie-nid</h2>
+                    <span>11 juillet, 13:48</span>
+                </div>
+            </div>
+            <div class="post-text">
+                🍦 NOUVEAUTÉ GLACÉE : PIRULO FIZZ ! Disponible dès maintenant.
+            </div>
+            <img src="nouveauté_glace.jpg" alt="">
+        </div>
+    
+            <div class="post">
+            <div class="post-header">
+                <div class="post-logo"></div>
+                <div class="post-info">
+                    <h2>Chez Greg - Pain-la Mie-nid</h2>
+                    <span>6 juillet, 19:15</span>
+                </div>
+            </div>
+            <div class="post-text">
+                ☀️ Nouveauté de l’été : découvrez notre pain estival aux saveurs du Sud 🍋🍅🫒
+            </div>
+            <img src="nouveauté de l'été.jpg" alt="">
+        </div>
+    </div>
+<script>
+window.addEventListener('scroll', function() {
+    let banner = document.querySelector('.banner');
+    let scrollTop = window.scrollY; // combien on a scrollé
+    let bannerHeight = banner.offsetHeight;
+
+    // Calcule la nouvelle opacité en fonction du scroll
+    let opacity = 1 - (scrollTop / bannerHeight);
+
+    // Empêche que ça devienne négatif
+    if (opacity < 0) opacity = 0;
+
+    banner.style.opacity = opacity;
+});
+</script>
+
+</body>
+</html>
