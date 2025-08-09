@@ -82,6 +82,52 @@
             <img src="nouveauté de l'été.jpg" alt="">
         </div>
     </div>
+    <style>
+            body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 0 0px 40px;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    nav.navbar {
+      width: 100%;
+      background-color: #d2691e;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      width: 100vw
+    }
+
+    nav.navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 0px;
+    }
+
+    nav.navbar a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s;
+      font-size: 1.1rem;
+    }
+
+    nav.navbar a:hover {
+      color: #ffcc66;
+    }
+
+    </style>
 <script>
 window.addEventListener('scroll', function() {
     let banner = document.querySelector('.banner');
