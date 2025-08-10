@@ -6,13 +6,159 @@
     <title>Chez Greg - Pain-la Mie-nid</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<header>
-    
-</header>
+<style> 
+    body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            justify-content: center; /* centre horizontalement */
+
+        }
+
+        /* Bannière */
+        .banner {
+            width: 100%;
+            height: 500px;
+            background: url('banniere.jpg') center/cover no-repeat;
+            position: relative;
+            transition: opacity 0.2s linear; /* transition douce */
+        }
+
+
+        /* Contenu principal */
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            justify-content: center;
+
+
+        }
+
+        /* Logo et nom */
+        .profile-header {
+            display: flex;
+            align-items: center;
+            margin-top: -20px;
+            margin-top: 0px;
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid white;
+            background: url('logo.jpg') center/cover no-repeat;
+            margin-top: -130px;
+
+            /* Pour qu'il passe en priorité */
+            position: relative;
+            z-index: 10;
+        }
+
+
+        .profile-info {
+            margin-left: 20px;
+        }
+
+        .profile-info h1 { 
+            margin: 0;
+        }
+
+        /* Intro */
+        .intro {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        /* Post */
+        .post {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 15px;
+            width: 500px;
+
+            /* Centrage horizontal */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        .post-header {
+            display: flex;
+            align-items: center;
+        }
+
+        .post-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: url('logo.jpg') center/cover no-repeat;
+        }
+
+        .post-info {
+            margin-left: 10px;
+        }
+
+        .post-info h2 {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .post-info span {
+            font-size: 12px;
+            color: gray;
+        }
+
+        .post-text {
+            margin: 15px 0;
+        }
+
+        .post img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .navbar {
+            background-color: #d2691e; /* marron doré style boulangerie */
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar li {
+            margin: 0 15px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #ffcc66; /* doré clair */
+        }
+</style>
 <body>
     <nav class="navbar">
     <ul>
-        <li><a href="#">Accueil</a></li>
+        <li><a href="index.html">Accueil</a></li>
         <li><a href="carte.html">Carte</a></li>
         <li><a href="a propos.html">À propos</a></li>
         <li><a href="nos produits.html">Nos Produits</a></li>
