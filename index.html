@@ -1,23 +1,244 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Chez Greg - Pain-la Mie-nid</title>
-  <!-- Si tu veux garder un style global externe, laisse la ligne suivante (optionnel) -->
-  <!-- <link rel="stylesheet" href="style.css"> -->
-  <style>
-    /* ====== RESET / BASE ====== */
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chez Greg - Pain-la Mie-nid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style> 
     html, body {
-      overflow-x: hidden;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+            overflow-x: hidden;
+            }
 
     body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            justify-content: center; /* centre horizontalement */
+
+        }
+
+        /* Bannière */
+        .banner {
+            width: 100%;
+            height: 500px;
+            background: url('banniere.jpg') center/cover no-repeat;
+            position: relative;
+            transition: opacity 0.2s linear; /* transition douce */
+            width: 100vw
+        }
+
+
+        /* Contenu principal */
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            justify-content: center;
+
+
+        }
+
+        /* Logo et nom */
+        .profile-header {
+            display: flex;
+            align-items: center;
+            margin-top: -20px;
+            margin-top: 0px;
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid white;
+            background: url('logo.jpg') center/cover no-repeat;
+            margin-top: -130px;
+
+            /* Pour qu'il passe en priorité */
+            position: relative;
+            z-index: 10;
+        }
+
+
+        .profile-info {
+            margin-left: 20px;
+        }
+
+        .profile-info h1 { 
+            margin: 0;
+        }
+
+        /* Intro */
+        .intro {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        /* Post */
+        .post {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 15px;
+            width: 500px;
+
+            /* Centrage horizontal */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        .post-header {
+            display: flex;
+            align-items: center;
+        }
+
+        .post-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: url('logo.jpg') center/cover no-repeat;
+        }
+
+        .post-info {
+            margin-left: 10px;
+        }
+
+        .post-info h2 {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .post-info span {
+            font-size: 12px;
+            color: gray;
+        }
+
+        .post-text {
+            margin: 15px 0;
+        }
+
+        .post img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .navbar {
+            background-color: #d2691e; /* marron doré style boulangerie */
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar li {
+            margin: 0 15px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #ffcc66; /* doré clair */
+        }
+</style>
+<body>
+    <nav class="navbar">
+    <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="carte.html">Carte</a></li>
+        <li><a href="a propos.html">À propos</a></li>
+        <li><a href="nos produits.html">Nos Produits</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+
+    <div class="banner"></div>
+
+    <div class="container">
+        <!-- Profil -->
+        <div class="profile-header">
+            <div class="logo"></div>
+            <div class="profile-info">
+                <h1>Chez Greg - Pain-la Mie-nid</h1>
+                <p>Artisan Boulanger 🥖 Nous sommes heureux de vous accueillir à Palaminy, Midi-Pyrénées.</p>
+            </div>
+        </div>
+
+        <!-- Intro -->
+        <div class="intro">
+            Bienvenue à la boulangerie CHEZ GREG 🥖 Nous vous accueillons du lundi au samedi avec des pains, viennoiseries et pâtisseries maison.
+        </div>
+
+        <!-- publication copie collez/ puis changer les infos -->
+        <div class="post">
+            <div class="post-header">
+                <div class="post-logo"></div>
+                <div class="post-info">
+                    <h2>Chez Greg - Pain-la Mie-nid</h2>
+                    <span>11 juillet, 16:55</span>
+                </div>
+            </div>
+            <div class="post-text">
+                🎉 OUVERTURE EXCEPTIONNELLE 🎉  
+                Ce lundi 14 juillet, votre boulangerie sera ouverte de 6h à 13h !
+            </div>
+        </div>
+
+        <!-- Autre publication -->
+        <div class="post">
+            <div class="post-header">
+                <div class="post-logo"></div>
+                <div class="post-info">
+                    <h2>Chez Greg - Pain-la Mie-nid</h2>
+                    <span>11 juillet, 13:48</span>
+                </div>
+            </div>
+            <div class="post-text">
+                🍦 NOUVEAUTÉ GLACÉE : PIRULO FIZZ ! Disponible dès maintenant.
+            </div>
+            <img src="nouveauté_glace.jpg" alt="">
+        </div>
+    
+            <div class="post">
+            <div class="post-header">
+                <div class="post-logo"></div>
+                <div class="post-info">
+                    <h2>Chez Greg - Pain-la Mie-nid</h2>
+                    <span>6 juillet, 19:15</span>
+                </div>
+            </div>
+            <div class="post-text">
+                ☀️ Nouveauté de l’été : découvrez notre pain estival aux saveurs du Sud 🍋🍅🫒
+            </div>
+            <img src="nouveauté de l'été.jpg" alt="">
+        </div>
+    </div>
+    <style>
+            body {
       font-family: Arial, sans-serif;
       background-color: #f0f2f5;
+      margin: 0;
+      padding: 0 0px 40px;
       color: #333;
       display: flex;
       flex-direction: column;
@@ -25,325 +246,54 @@
       min-height: 100vh;
     }
 
-    a { color: inherit; }
-
-    /* ====== NAVBAR (desktop + responsive) ====== */
     nav.navbar {
-      width: 100vw;
+      width: 100%;
       background-color: #d2691e;
-      position: sticky;
+      padding: 10px 0;
+      position: fixed;
       top: 0;
-      z-index: 1200;
+      z-index: 1000;
       display: flex;
       justify-content: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      width: 100vw
     }
 
-    /* inner wrapper pour limiter la largeur sur desktop */
-    .nav-inner {
-      width: 100%;
-      max-width: 1200px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 8px 16px;
-      gap: 12px;
-    }
-
-    .nav-inner .brand {
-      color: white;
-      font-weight: bold;
-      font-size: 1.1rem;
-      letter-spacing: 0.2px;
-    }
-
-    .nav-inner ul {
+    nav.navbar ul {
       list-style: none;
       margin: 0;
       padding: 0;
       display: flex;
-      gap: 18px;
-      align-items: center;
+      gap: 0px;
     }
 
-    .nav-inner a {
+    nav.navbar a {
       text-decoration: none;
       color: white;
       font-weight: bold;
-      font-size: 1.05rem;
-      padding: 6px 8px;
-      border-radius: 6px;
-      transition: background .15s, color .15s;
+      transition: color 0.3s;
+      font-size: 1.1rem;
     }
 
-    .nav-inner a:hover {
+    nav.navbar a:hover {
       color: #ffcc66;
-      background: rgba(255,255,255,0.03);
     }
 
-    /* bouton hamburger (masqué sur desktop) */
-    .hamburger-btn {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 8px;
-      border-radius: 6px;
-      color: white;
-    }
-    .hamburger-btn:focus { outline: 2px solid rgba(255,255,255,0.25); }
-    .bar { display: block; width: 26px; height: 3px; margin: 4px 0; border-radius: 2px; background: #fff; }
+    </style>
+<script>
+window.addEventListener('scroll', function() {
+    let banner = document.querySelector('.banner');
+    let scrollTop = window.scrollY; // combien on a scrollé
+    let bannerHeight = banner.offsetHeight;
 
-    /* ====== BANNIERE ====== */
-    .banner {
-      width: 100vw;
-      height: 500px;
-      background: url('banniere.jpg') center/cover no-repeat;
-      position: relative;
-      transition: opacity 0.2s linear;
-    }
+    // Calcule la nouvelle opacité en fonction du scroll
+    let opacity = 1 - (scrollTop / bannerHeight);
 
-    /* ====== CONTAINER ====== */
-    .container {
-      width: calc(100% - 40px);
-      max-width: 900px;
-      margin: -80px auto 40px; /* remonte le container pour laisser le logo en overlap */
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.06);
-      background: transparent;
-    }
+    // Empêche que ça devienne négatif
+    if (opacity < 0) opacity = 0;
 
-    /* ====== PROFILE HEADER (logo + infos) ====== */
-    .profile-header {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-    }
+    banner.style.opacity = opacity;
+});
+</script>
 
-    .logo {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 4px solid white;
-      background: url('logo.jpg') center/cover no-repeat;
-      position: relative;
-      z-index: 10;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-      /* pour l'effet overlap */
-      margin-top: -60px;
-      flex-shrink: 0;
-    }
-
-    .profile-info h1 { margin: 0; font-size: 1.4rem; }
-    .profile-info p { margin: 6px 0 0; color: #555; }
-
-    /* ====== INTRO & POSTS ====== */
-    .intro {
-      background: #f5f5f5;
-      padding: 15px;
-      border-radius: 8px;
-      margin: 18px 0;
-    }
-
-    .post {
-      background: white;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      margin-bottom: 20px;
-      padding: 15px;
-      width: 100%;
-      max-width: 600px; /* garde un max sur grand écran */
-      margin-left: auto;
-      margin-right: auto;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-    }
-
-    .post-header { display: flex; align-items: center; gap: 10px; }
-    .post-logo {
-      width: 50px; height: 50px; border-radius: 50%;
-      background: url('logo.jpg') center/cover no-repeat;
-      flex-shrink: 0;
-    }
-
-    .post-info h2 { margin: 0; font-size: 16px; }
-    .post-info span { font-size: 12px; color: gray; }
-
-    .post-text { margin: 12px 0; line-height: 1.4; }
-    .post img { max-width: 100%; border-radius: 8px; display:block; margin-top:8px; }
-
-    /* ====== RESPONSIVE (mobile) ====== */
-    @media (max-width: 768px) {
-      /* navbar : cacher la liste, afficher hamburger */
-      .hamburger-btn { display: block; }
-      .nav-inner ul { display: none; } /* toggle via JS ajoutera .show */
-
-      /* menu dépliant plein width */
-      .nav-inner ul.show {
-        display: flex;
-        position: absolute;
-        top: 56px; /* juste sous la navbar */
-        left: 0;
-        width: 100vw;
-        flex-direction: column;
-        background: #d2691e;
-        gap: 0;
-        padding: 8px 0 14px;
-        box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-      }
-      .nav-inner ul.show li { width: 100%; text-align:center; margin: 0; }
-      .nav-inner ul.show a { display:block; padding: 12px 16px; font-size: 1.05rem; }
-
-      /* bannière moins haute sur mobile pour garder lisibilité */
-      .banner { height: 300px; }
-
-      /* container plus proche et empilement vertical */
-      .container { margin: -60px auto 30px; padding: 16px; width: calc(100% - 24px); }
-
-      /* profile header empilé et centré */
-      .profile-header { flex-direction: column; align-items: center; text-align: center; gap: 8px; }
-      .logo { width: 110px; height: 110px; margin-top: -50px; }
-
-      /* posts prennent toute la largeur disponible */
-      .post { max-width: 100%; padding: 14px; border-radius: 10px; }
-
-      /* garde la taille de texte lisible (pas de réduction) */
-      .profile-info h1 { font-size: 1.2rem; }
-      .nav-inner a { font-size: 1rem; }
-    }
-
-    /* plus petits écrans */
-    @media (max-width: 420px) {
-      .banner { height: 240px; }
-      .logo { width: 100px; height: 100px; margin-top: -40px; }
-    }
-
-  </style>
-</head>
-<body>
-
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="nav-inner">
-      <div class="brand">Chez Greg - Pain-la Mie-nid</div>
-
-      <!-- bouton hamburger visible seulement en mobile -->
-      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Ouvrir le menu" aria-expanded="false">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
-
-      <ul id="menu">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="carte.html">Carte</a></li>
-        <li><a href="a propos.html">À propos</a></li>
-        <li><a href="nos produits.html">Nos Produits</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- BANNIERE -->
-  <div class="banner" role="img" aria-label="Bannière boulangerie"></div>
-
-  <!-- CONTENU -->
-  <div class="container">
-    <!-- Profil -->
-    <div class="profile-header">
-      <div class="logo" aria-hidden="true"></div>
-      <div class="profile-info">
-        <h1>Chez Greg - Pain-la Mie-nid</h1>
-        <p>Artisan Boulanger 🥖 Nous sommes heureux de vous accueillir à Palaminy, Midi-Pyrénées.</p>
-      </div>
-    </div>
-
-    <!-- Intro -->
-    <div class="intro">
-      Bienvenue à la boulangerie CHEZ GREG 🥖 Nous vous accueillons du lundi au samedi avec des pains, viennoiseries et pâtisseries maison.
-    </div>
-
-    <!-- publication -->
-    <div class="post">
-      <div class="post-header">
-        <div class="post-logo"></div>
-        <div class="post-info">
-          <h2>Chez Greg - Pain-la Mie-nid</h2>
-          <span>11 juillet, 16:55</span>
-        </div>
-      </div>
-      <div class="post-text">
-        🎉 OUVERTURE EXCEPTIONNELLE 🎉<br>
-        Ce lundi 14 juillet, votre boulangerie sera ouverte de 6h à 13h !
-      </div>
-    </div>
-
-    <div class="post">
-      <div class="post-header">
-        <div class="post-logo"></div>
-        <div class="post-info">
-          <h2>Chez Greg - Pain-la Mie-nid</h2>
-          <span>11 juillet, 13:48</span>
-        </div>
-      </div>
-      <div class="post-text">
-        🍦 NOUVEAUTÉ GLACÉE : PIRULO FIZZ ! Disponible dès maintenant.
-      </div>
-      <img src="nouveauté_glace.jpg" alt="Pirulo Fizz">
-    </div>
-
-    <div class="post">
-      <div class="post-header">
-        <div class="post-logo"></div>
-        <div class="post-info">
-          <h2>Chez Greg - Pain-la Mie-nid</h2>
-          <span>6 juillet, 19:15</span>
-        </div>
-      </div>
-      <div class="post-text">
-        ☀️ Nouveauté de l’été : découvrez notre pain estival aux saveurs du Sud 🍋🍅🫒
-      </div>
-      <img src="nouveauté de l'été.jpg" alt="Pain estival">
-    </div>
-  </div>
-
-  <script>
-    // toggle menu mobile
-    const hamburgerBtn = document.getElementById('hamburgerBtn');
-    const menu = document.getElementById('menu');
-
-    function toggleMenu() {
-      menu.classList.toggle('show');
-      const expanded = menu.classList.contains('show');
-      hamburgerBtn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
-    }
-
-    hamburgerBtn.addEventListener('click', toggleMenu);
-
-    // fermer le menu quand on clique sur un lien (pratique mobile)
-    menu.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        if (menu.classList.contains('show')) toggleMenu();
-      });
-    });
-
-    // si on redimensionne en desktop, s'assurer que le menu est visible (ou réinitialisé)
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 768 && menu.classList.contains('show')) {
-        menu.classList.remove('show');
-        hamburgerBtn.setAttribute('aria-expanded', 'false');
-      }
-    });
-
-    // effet opacity de la bannière au scroll (conserve ton comportement)
-    window.addEventListener('scroll', function() {
-      const banner = document.querySelector('.banner');
-      if (!banner) return;
-      const scrollTop = window.scrollY;
-      const bannerHeight = banner.offsetHeight || 1;
-      let opacity = 1 - (scrollTop / bannerHeight);
-      if (opacity < 0) opacity = 0;
-      banner.style.opacity = opacity;
-    });
-  </script>
 </body>
 </html>

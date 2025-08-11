@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
   <style>
+
         html, body {
             overflow-x: hidden;
             }
@@ -34,7 +35,7 @@
       z-index: 1000;
       display: flex;
       justify-content: center;
-      width: 100vw
+      position: fixed;
     }
 
     nav.navbar ul {
@@ -51,11 +52,18 @@
       font-weight: bold;
       transition: color 0.3s;
       font-size: 1.1rem;
+      
     }
 
     nav.navbar a:hover {
       color: #ffcc66;
     }
+
+      nav.navbar.scrolled {
+    background-color: #b55a18;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
 
 
     /* Bannière */
@@ -300,6 +308,15 @@
 
       banner.style.opacity = opacity;
     });
+
+  window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('nav.navbar');
+    if (window.scrollY > 0) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
   </script>
 
 </body>

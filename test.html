@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Test Leaflet Routing</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+  <style>
+    #map { height: 400px; width: 600px; }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+  <script>
+    const boulangerieLat = 43.2024514;
+    const boulangerieLng = 1.069202;
+
+    const map = L.map('map').setView([boulangerieLat, boulangerieLng], 15);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap'
+    }).addTo(map);
+
+    L.marker([boulangerieLat, boulangerieLng]).addTo(map).bindPopup("Boulangerie").openPopup();
+
+    function afficherTrajet(lat, lng) {
+      L.Routing.control({
+        waypoints: [
+          L.latLng(lat, lng),
+          L.latLng(boulangerieLat, boulangerieLng)
+        ],
+        createMarker: () => null,
+        addWaypoints: false,
+        draggableWaypoints: false,
+        routeWhileDragging: false,
+        lineOptions: {
+          styles: [{ color: 'blue', opacity: 0.7, weight: 5 }]
+        }
+      }).addTo(map);
+    }
+
+    // Exemple de test direct
+    afficherTrajet(43.21, 1.07);
+  </script>
+</body>
+</html>
