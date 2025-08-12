@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos - Boulangerie</title>
+  <link rel="icon" href="photo-profil.png" type="image/png" />
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      color: #333;
+    }
+
+    nav.navbar {
+      width: 100%;
+      background-color: #d2691e;
+      padding: 10px 0;
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      width: 100vw;
+      padding: 20px;
+    }
+
+    nav.navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav.navbar a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s;
+      font-size: 1.1rem;
+    }
+
+    nav.navbar a:hover {
+      color: #ffcc66;
+    }
+
+    /* Bannière */
+    .banner {
+      position: relative;
+      /* pour que le logo positionné en absolute se réfère à la bannière */
+      width: 100%;
+      max-width: 900px;
+      height: 300px;
+      background: url('banniere.jpg') center/cover no-repeat;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+      margin-top: 60px;
+      width: 100vw
+    }
+
+    .logo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid white;
+      background: url('logo.jpg') center/cover no-repeat;
+      position: absolute;
+      top: 60px;
+      /* ajustable */
+      left: 20px;
+      /* ajustable */
+      z-index: 10;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Container principal */
+    .container {
+      max-width: 900px;
+      width: 100%;
+      background: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 30px 40px;
+      margin-top: -60px;
+      border-radius: 8px;
+      position: relative;
+      z-index: 5;
+      color: #444;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 500px;
+    }
+
+    .container h1 {
+      color: #d2691e;
+      margin-bottom: 15px;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+
+    .container p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    /* Footer flex pour signature et lien */
+    .footer-container {
+      margin-top: auto; /* pousse vers le bas */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+    }
+
+    .signature {
+      font-style: italic;
+      font-weight: bold;
+      color: #a0522d;
+      text-align: right;
+    }
+
+    .news-link a {
+      color: #d2691e; /* jaune comme hover menu */
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .news-link a:hover {
+      text-decoration: underline;
+    }
+
+      /* Ajout bouton hamburger caché par défaut */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+/* Responsive pour 600px et moins */
+@media (max-width: 600px) {
+  nav.navbar {
+    justify-content: space-between;
+    padding: 10px 20px;
+    
+  }
+
+  nav.navbar ul {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #d2691e;
+    padding: 15px 0;
+    display: none;
+    text-align: center;
+  }
+
+  nav.navbar ul.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Responsive pour 800px et moins */
+@media (max-width: 800px) and (min-width: 601px) {
+  nav.navbar {
+    justify-content: space-between;
+    padding: 10px 20px;
+    
+  }
+
+  nav.navbar ul {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #d2691e;
+    padding: 15px 0;
+    display: none;
+    text-align: center;
+  }
+
+  nav.navbar ul.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <button class="hamburger" id="hamburger">☰</button>
+    <ul id="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="carte.html">Carte</a></li>
+      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="nos-produits.html">Nos Produits</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="banner">
+    <div class="logo"></div>
+  </div>
+
+  <div class="container">
+    <h1>À propos de Chez Greg - Pain-la Mie-nid</h1>
+    <p>
+      Bienvenue à la <strong>Boulangerie Pain-La-Mie-Nid</strong>, le nouveau souffle gourmand au cœur de notre village. Après trois années d’attente, c’est avec fierté que Grégory Potola, artisan boulanger passionné d’origine réunionnaise, rouvre les portes de ce commerce emblématique, le mardi 3 décembre prochain.
+    </p>
+    <p>
+      Fort de neuf années d’expérience auprès d’une référence locale, la boulangerie de la Croix du Pouech à Saint-Gaudens, Grégory transmet aujourd’hui un savoir-faire précieux acquis auprès du maître boulanger Manuel Nunes.
+    </p>
+    <p>
+      Ici, nous mettons un point d’honneur à travailler des produits de qualité, mêlant tradition et innovation : de la baguette Tradition Label Rouge, notre produit phare, aux viennoiseries maison, en passant par une gamme gourmande de sandwichs, pizzas, quiches et même des spécialités réunionnaises proposées ponctuellement en service traiteur.
+    </p>
+    <p>
+      Ce projet, soutenu depuis ses débuts par la mairie de Palaminy et la minoterie Moulin Calvet, incarne un engagement fort envers notre communauté. L’ancienne grange rénovée, désormais laboratoire moderne, est le cœur battant de notre boulangerie, où passion et proximité sont au rendez-vous.
+    </p>
+    <p>
+      Nous vous accueillons du lundi au samedi dès 6 heures du matin, pour partager avec vous le goût du bon pain et de la convivialité.
+    </p>
+    <p>
+      Merci de faire partie de notre histoire. Votre satisfaction est notre plus belle récompense.
+    </p>
+
+    <div class="footer-container">
+      <div class="news-link">
+        <a href="https://www.ladepeche.fr/2024/11/29/le-village-accueille-son-nouveau-boulanger-apres-une-longue-fermeture-12354442.php?fbclid=IwY2xjawMEgOdleHRuA2FlbQIxMABicmlkETBXelVWSVVGRm5IelFmVkJ1AR4CsiVXEUVWASFtM9xAjkRTnsYtPnPdgxf2xzCUSFqKmDOG8wS94dgE-JttDg_aem_N5cNN7kbmOL2OiXaHNGjBw" target="_blank" rel="noopener noreferrer">La Dépêche</a>
+      </div>
+      <div class="signature">— Greg, fondateur</div>
+    </div>
+  </div>
+
+</body>
+
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
+
+</html>

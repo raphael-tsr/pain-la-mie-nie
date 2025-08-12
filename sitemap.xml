@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<url>
+    <loc>https://thonseehealth.com/index.html</loc>
+    <lastmod>2025-08-12</lastmod>
+    <priority>1.0</priority>
+</url>
+
+<url>
+    <loc>https://thonseehealth.com/carte.html</loc>
+    <lastmod>2025-08-10</lastmod>
+    <priority>0.8</priority>
+</url>
+    
+<url>
+    <loc>https://thonseehealth.com/a%20propos.html</loc>
+    <lastmod>2025-08-10</lastmod>
+    <priority>0.6</priority>
+</url>
+
+<url>
+    <loc>https://thonseehealth.com/nos%20produits.html</loc>
+    <lastmod>2025-08-10</lastmod>
+    <priority>0.4</priority>
+</url>
+
+<url>
+    <loc>https://thonseehealth.com/contact.html</loc>
+    <lastmod>2025-08-10</lastmod>
+    <priority>0.2</priority>
+</url>
+  <!-- Ajoute ici d’autres URLs importantes -->
+
+</urlset>
