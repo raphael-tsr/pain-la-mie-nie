@@ -26,11 +26,13 @@
       width: 100%;
       background-color: #d2691e;
       padding: 10px 0;
-      position: sticky;
+      position: fixed;
       top: 0;
       z-index: 1000;
       display: flex;
       justify-content: center;
+      width: 100vw;
+      padding: 20px;
     }
 
     nav.navbar ul {
@@ -74,7 +76,7 @@
       border: 4px solid white;
       background: url('logo.jpg') center/cover no-repeat;
       position: absolute;
-      top: 20px;
+      top: 60px;
       /* ajustable */
       left: 20px;
       /* ajustable */
@@ -140,33 +142,82 @@
       text-decoration: underline;
     }
 
-    @media (max-width: 600px) {
-      .container {
-        padding: 20px;
-        margin-top: -40px;
-      }
+      /* Ajout bouton hamburger caché par défaut */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  margin-left: 50px;
+}
 
-      nav.navbar ul {
-        gap: 15px;
-      }
+/* Responsive pour 600px et moins */
+@media (max-width: 600px) {
+  nav.navbar {
+    justify-content: space-between;
+    padding: 10px 20px;
+    
+  }
 
-      .footer-container {
-        flex-direction: column;
-        gap: 10px;
-        align-items: flex-start;
-      }
+  nav.navbar ul {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #d2691e;
+    padding: 15px 0;
+    display: none;
+    text-align: center;
+  }
 
-      .signature {
-        text-align: left;
-      }
-    }
+  nav.navbar ul.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Responsive pour 800px et moins */
+@media (max-width: 800px) and (min-width: 601px) {
+  nav.navbar {
+    justify-content: space-between;
+    padding: 10px 20px;
+    
+  }
+
+  nav.navbar ul {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #d2691e;
+    padding: 15px 0;
+    display: none;
+    text-align: center;
+  }
+
+  nav.navbar ul.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
   </style>
 </head>
 
 <body>
 
   <nav class="navbar">
-    <ul>
+    <button class="hamburger" id="hamburger">☰</button>
+    <ul id="nav-links">
       <li><a href="index.html">Accueil</a></li>
       <li><a href="carte.html">Carte</a></li>
       <li><a href="a propos.html">À propos</a></li>
@@ -209,5 +260,15 @@
   </div>
 
 </body>
+
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
 
 </html>
